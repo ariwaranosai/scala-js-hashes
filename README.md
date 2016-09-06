@@ -1,2 +1,2 @@
-# scala-js-md5js
-md5-js facade types for Scala.js
+# scala-js-hashes
+js-hashes facade types for Scala.js
