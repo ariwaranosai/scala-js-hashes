@@ -1,3 +1,5 @@
+package xyz.ariwaranosai.hashes
+
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSName
 /**
