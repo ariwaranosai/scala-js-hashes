@@ -16,3 +16,11 @@ libraryDependencies ++= Seq(
 )
 
 scalacOptions ++= Seq("-deprecation", "-feature", "-Xfatal-warnings")
+
+licenses += ("MIT", url("https://opensource.org/licenses/MIT"))
+
+scmInfo := Some(ScmInfo(
+  url("https://github.com/ariwaranosai/scala-js-hashes.git"),
+  "scm:git:git@github.com:ariwaranosai/scala-js-hashes.git",
+  Some("scm:git:git@github.com:ariwaranosai/scala-js-hashes.git")
+))
