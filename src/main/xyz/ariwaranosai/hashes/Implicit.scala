@@ -19,6 +19,5 @@ object Implicit {
     def setUpperCase(a: Boolean) = m.setUpperCase(a)
     def setPad(a: String) = m.setPad(a)
     def setUTF8(a: Boolean) = m.setUTF8(a)
-
   }
 }
