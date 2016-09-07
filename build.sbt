@@ -7,7 +7,7 @@ normalizedName := "scalajs-hashes"
 
 organization := "xyz.ariwaranosai"
 
-version := "0.0.1-SNAPSHOT"
+version := "0.0.2"
 
 scalaVersion := "2.11.8"
 
@@ -19,10 +19,10 @@ libraryDependencies ++= Seq(
 
 scalacOptions ++= Seq("-deprecation", "-feature", "-Xfatal-warnings")
 
-licenses += ("MIT", url("https://opensource.org/licenses/MIT"))
-
-scmInfo := Some(ScmInfo(
-  url("https://github.com/ariwaranosai/scala-js-hashes.git"),
-  "scm:git:git@github.com:ariwaranosai/scala-js-hashes.git",
-  Some("scm:git:git@github.com:ariwaranosai/scala-js-hashes.git")
-))
+publishTo := {
+  val nexus = "https://oss.sonatype.org/"
+  if (isSnapshot.value)
+    Some("snapshots" at nexus + "content/repositories/snapshots")
+  else
+    Some("releases"  at nexus + "service/local/staging/deploy/maven2/")
+}
