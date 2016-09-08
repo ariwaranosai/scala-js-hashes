@@ -14,7 +14,7 @@ cache:
         - $HOME/.sbt/boot/scala-$TRAVIS_SCALA_VERSION
 
 script:
-  - sbt fastOptJS
+  - sbt test
 
 addons:
     apt:

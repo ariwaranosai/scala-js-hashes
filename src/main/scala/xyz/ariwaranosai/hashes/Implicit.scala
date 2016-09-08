@@ -10,7 +10,7 @@ object Implicit {
 
   implicit class MD5Ops(s: String) {
     private val m = new MD5()
-    def hex() = m.hex(s)
+    def hex = m.hex(s)
     def hex_hmac(key: String) = m.hex_hmac(key, s)
     def b64: String = m.b64(s)
     def b64_hmac(key: String) = m.b64_hmac(key, s)

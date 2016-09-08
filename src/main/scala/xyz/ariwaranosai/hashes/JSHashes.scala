@@ -32,3 +32,7 @@ class MD5(options: MD5Options = new MD5Options(false, "=", true)) extends js.Obj
   def vm_test(): Unit = js.native
 }
 
+object MD5 {
+  def apply(options: MD5Options = new MD5Options(false, "=", true)): MD5 = new MD5(options)
+}
+
