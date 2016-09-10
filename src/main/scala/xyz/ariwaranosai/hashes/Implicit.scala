@@ -4,6 +4,7 @@ package xyz.ariwaranosai.hashes
   */
 
 object Implicit {
+
   implicit class HashOps(s: String) {
     def MD5() = new MD5Ops(s)
     def SHA1() = new SHA1Ops(s)

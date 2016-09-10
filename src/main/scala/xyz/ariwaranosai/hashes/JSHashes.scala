@@ -2,6 +2,7 @@ package xyz.ariwaranosai.hashes
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSName
+import JSHashes._
 /**
   * Created by sai on 2016/9/6.
   */
@@ -22,22 +23,26 @@ abstract class JSHashes(options: HashesOptions) extends js.Object {
   def vm_test(): Unit = js.native
 }
 
+object JSHashes {
+  val defaultOptions = HashesOptions(uppercase = false, "=", utf8 = true)
+}
+
 @JSName("Hashes.MD5")
 @js.native
-class MD5(options: HashesOptions = HashesOptions(uppercase = false, "=", utf8 = true)) extends JSHashes(options)
+class MD5(options: HashesOptions = defaultOptions) extends JSHashes(options)
 
 @JSName("Hashes.SHA1")
 @js.native
-class SHA1(options: HashesOptions = HashesOptions(uppercase = false, "=", utf8 = true)) extends JSHashes(options)
+class SHA1(options: HashesOptions = defaultOptions) extends JSHashes(options)
 
 @JSName("Hashes.SHA256")
 @js.native
-class SHA256(options: HashesOptions = HashesOptions(uppercase = false, "=", utf8 = true)) extends JSHashes(options)
+class SHA256(options: HashesOptions = defaultOptions) extends JSHashes(options)
 
 @JSName("Hashes.SHA512")
 @js.native
-class SHA512(options: HashesOptions = HashesOptions(uppercase = false, "=", utf8 = true)) extends JSHashes(options)
+class SHA512(options: HashesOptions = defaultOptions) extends JSHashes(options)
 
 @JSName("Hashes.RMD160")
 @js.native
-class RMD160(options: HashesOptions = HashesOptions(uppercase = false, "=", utf8 = true)) extends JSHashes(options)
+class RMD160(options: HashesOptions = defaultOptions) extends JSHashes(options)
