@@ -13,9 +13,7 @@ cache:
         - $HOME/.ivy2/cache
         - $HOME/.sbt/boot/scala-$TRAVIS_SCALA_VERSION
 
-script: "sbt clean coverage test"
-
-after_success: "sbt coverageReport coveralls"
+script: "sbt test"
 
 addons:
     apt:
