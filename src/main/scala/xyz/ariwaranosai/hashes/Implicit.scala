@@ -5,7 +5,8 @@ package xyz.ariwaranosai.hashes
 
 object Implicit {
   implicit class HashOps(s: String) {
-    def MD5() = MD5Ops(s)
+    def MD5() = new MD5Ops(s)
+    def SHA1() = new SHA1Ops(s)
   }
 
   sealed abstract class JSHashOps(s: String) {
@@ -24,5 +25,9 @@ object Implicit {
 
   implicit class MD5Ops(s: String) extends JSHashOps(s) {
     val m = new MD5()
+  }
+
+  implicit class SHA1Ops(s: String) extends JSHashOps(s) {
+    val m = new SHA1()
   }
 }
