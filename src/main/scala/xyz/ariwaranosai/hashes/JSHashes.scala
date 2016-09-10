@@ -30,3 +30,14 @@ class MD5(options: HashesOptions = HashesOptions(uppercase = false, "=", utf8 = 
 @js.native
 class SHA1(options: HashesOptions = HashesOptions(uppercase = false, "=", utf8 = true)) extends JSHashes(options)
 
+@JSName("Hashes.SHA256")
+@js.native
+class SHA256(options: HashesOptions = HashesOptions(uppercase = false, "=", utf8 = true)) extends JSHashes(options)
+
+@JSName("Hashes.SHA512")
+@js.native
+class SHA512(options: HashesOptions = HashesOptions(uppercase = false, "=", utf8 = true)) extends JSHashes(options)
+
+@JSName("Hashes.RMD160")
+@js.native
+class RMD160(options: HashesOptions = HashesOptions(uppercase = false, "=", utf8 = true)) extends JSHashes(options)

@@ -7,6 +7,9 @@ object Implicit {
   implicit class HashOps(s: String) {
     def MD5() = new MD5Ops(s)
     def SHA1() = new SHA1Ops(s)
+    def SHA256() = new SHA256Ops(s)
+    def SHA512() = new SHA512Ops(s)
+    def RMD160() = new RMD160Ops(s)
   }
 
   sealed abstract class JSHashOps(s: String) {
@@ -30,4 +33,17 @@ object Implicit {
   implicit class SHA1Ops(s: String) extends JSHashOps(s) {
     val m = new SHA1()
   }
+
+  implicit class SHA256Ops(s: String) extends JSHashOps(s) {
+    val m = new SHA256()
+  }
+
+  implicit class SHA512Ops(s: String) extends JSHashOps(s) {
+    val m = new SHA512()
+  }
+
+  implicit class RMD160Ops(s: String) extends JSHashOps(s) {
+    val m = new RMD160()
+  }
+
 }
