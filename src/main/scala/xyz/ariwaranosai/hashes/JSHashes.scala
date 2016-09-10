@@ -7,23 +7,7 @@ import scala.scalajs.js.annotation.JSName
   */
 
 @js.native
-class HashesOptions(
-                  uppercase: Boolean,
-                  pad: String,
-                  utf8: Boolean
-                ) extends js.Object
-
-object HashesOptions {
-  def apply(
-             uppercase: Boolean,
-             pad: String,
-             utf8: Boolean
-           ): HashesOptions = new HashesOptions(uppercase, pad, utf8)
-}
-
-@JSName("Hashes.MD5")
-@js.native
-class MD5(options: HashesOptions = HashesOptions(uppercase = false, "=", utf8 = true)) extends js.Object {
+abstract class JSHashes(options: HashesOptions) extends js.Object {
   def hex(s: String): String = js.native
   def hex_hmac(key: String, string: String): String = js.native
   def b64(s: String): String = js.native
@@ -35,9 +19,13 @@ class MD5(options: HashesOptions = HashesOptions(uppercase = false, "=", utf8 = 
   def setPad(a: String): String  = js.native
   def setUTF8(a: Boolean): String  = js.native
 
-
   def vm_test(): Unit = js.native
 }
+
+@JSName("Hashes.MD5")
+@js.native
+class MD5(options: HashesOptions = HashesOptions(uppercase = false, "=", utf8 = true)) extends JSHashes(options)
+
 
 object MD5 {
   def apply(options: HashesOptions = HashesOptions(uppercase = false, "=", utf8 = true)): MD5 = new MD5(options)
