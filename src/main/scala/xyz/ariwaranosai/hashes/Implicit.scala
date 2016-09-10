@@ -8,8 +8,8 @@ object Implicit {
     def MD5() = MD5Ops(s)
   }
 
-  implicit class MD5Ops(s: String) {
-    private val m = new MD5()
+  sealed abstract class JSHashOps(s: String) {
+    val m: JSHashes
     def hex = m.hex(s)
     def hex_hmac(key: String) = m.hex_hmac(key, s)
     def b64: String = m.b64(s)
@@ -20,5 +20,9 @@ object Implicit {
     def setUpperCase(a: Boolean) = m.setUpperCase(a)
     def setPad(a: String) = m.setPad(a)
     def setUTF8(a: Boolean) = m.setUTF8(a)
+  }
+
+  implicit class MD5Ops(s: String) extends JSHashOps(s) {
+    val m = new MD5()
   }
 }

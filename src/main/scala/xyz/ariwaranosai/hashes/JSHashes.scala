@@ -26,8 +26,6 @@ abstract class JSHashes(options: HashesOptions) extends js.Object {
 @js.native
 class MD5(options: HashesOptions = HashesOptions(uppercase = false, "=", utf8 = true)) extends JSHashes(options)
 
-
 object MD5 {
   def apply(options: HashesOptions = HashesOptions(uppercase = false, "=", utf8 = true)): MD5 = new MD5(options)
 }
-
