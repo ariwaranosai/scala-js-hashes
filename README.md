@@ -15,8 +15,8 @@ scalajs-hashes provide jshashes facade type for scalajs programs since there are
 
 Add the following to your sbt build definition:
 
-    libraryDependencies += "xyz.ariwaranosai" %%% "scalajs-hashes" % "0.1.0"
-
+    libraryDependencies += "xyz.ariwaranosai" %%% "scalajs-hashes" % "0.1.0"
+          
 ###include javascript
 
 `hashes.js` file itself is also needed. You can include it in your html file. Another way is include it in the final `jsdeps.js` by add the desired version to `jdDependencies`,e.g.,
