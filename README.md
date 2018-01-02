@@ -25,7 +25,7 @@ Add the following to your sbt build definition:
     
 ###Hashes
 
-scalajs-hashes provides two way to get hashes, please follow those [testcase](https://github.com/ariwaranosai/scala-js-hashes/blob/master/src/test/scala/xyz/ariwaranosai/hashes/JSHashesTest.scala).
+scalajs-hashes provides two ways to get hashes, please follow those [testcase](https://github.com/ariwaranosai/scala-js-hashes/blob/master/src/test/scala/xyz/ariwaranosai/hashes/JSHashesTest.scala).
 
 ##License
 
